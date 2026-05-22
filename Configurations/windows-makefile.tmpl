@@ -49,7 +49,7 @@
  sub shlib_import {
      my $lib = shift;
      return () if $disabled{shared} || $lib =~ /\.a$/;
-     return $lib . $shlibextimport;
+     return $lib . $shlibvariant . $shlibextimport;
  }
 
  sub dso {
